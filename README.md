@@ -1,6 +1,6 @@
 # Surfing CRM
 
-## Deployment Link: [DEMO](https://surfing-e479.vercel.app/)
+## Deployment Link: [DEMO](https://surfing-crm.vercel.app/)
 
 ## Rules To Code
 
