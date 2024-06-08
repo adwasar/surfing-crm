@@ -1,0 +1,59 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+.photoAdd {
+  display: flex;
+  flex-direction: column;
+  gap: 58px;
+  width: 561px;
+  height: 481px;
+  @include phone2 {
+    width: 80vw;
+    gap: 24px;
+    flex: 1;
+  }
+
+  &__input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    color: $color-text-gray7;
+    border: 1px solid $color-gray4;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(243, 247, 254);
+    }
+    @include phone2 {
+      height: 50%;
+    }
+  }
+
+  & button {
+    align-self: end;
+  }
+}
+.container {
+  display: flex;
+  flex: 1;
+  gap: 18px;
+  @include phone2 {
+    flex-direction: column;
+  }
+}
+.photos {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0;
+  overflow-x: scroll;
+  max-height: 368px;
+
+  & img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+  }
+}

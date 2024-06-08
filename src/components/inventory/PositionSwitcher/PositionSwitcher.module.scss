@@ -1,0 +1,8 @@
+@import '../../../assets/scss/variables';
+.positionBtns {
+  display: flex;
+  position: relative;
+  background-color: $color-white;
+  overflow: hidden;
+  border-radius: 6px;
+}

@@ -1,0 +1,116 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+.tr {
+  background-color: $color-white;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.05));
+}
+
+.tr td:first-child {
+  padding-left: 15px;
+}
+
+tr td:last-child {
+  padding-right: 15px;
+  @include phone2 {
+    padding-right: 0;
+  }
+}
+.tr td:not(:nth-child(2)) {
+  text-align: center;
+}
+.tr td:nth-child(2) {
+  display: block;
+  text-align: left;
+
+  @include tablet {
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  @include phone2 {
+    width: 170px;
+  }
+}
+.tr td {
+  color: $color-text-gray6;
+  font-size: 14px;
+  font-weight: normal;
+  white-space: nowrap;
+  line-height: 1.25;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  @include tablet {
+    &:not(.price) {
+      padding-right: 3px;
+    }
+    padding-left: 3px;
+  }
+  @include phone2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 12px;
+  }
+}
+.tr td svg {
+  vertical-align: middle;
+}
+.tr:hover {
+  background-color: rgb(243, 247, 254);
+}
+.btn {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  color: inherit;
+  z-index: 2;
+  @include phone2 {
+    font-size: 12px;
+  }
+}
+.qr,
+.availability,
+.reg,
+.action {
+  @include phone2 {
+    display: none;
+  }
+}
+
+.price {
+  @include phone2 {
+    padding-right: 15px;
+  }
+}
+.expandedRow {
+  display: none;
+  @include phone2 {
+    display: table-row;
+  }
+}
+.table {
+  width: 100%;
+  text-align: center;
+  background-color: #f1f1f1;
+
+  & tr th {
+    color: rgba(173, 182, 187, 1);
+    font-size: 10px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    text-align: center;
+    width: auto;
+  }
+  & tr td {
+    font-size: 12px;
+    color: $color-text-gray6;
+    padding-bottom: 10px;
+    &:first-child {
+      padding-left: 16px;
+    }
+  }
+}
+.subRow {
+  padding-bottom: 10px;
+}

@@ -1,0 +1,154 @@
+@import 'src/assets/scss/variables';
+
+.navigationButtons {
+  position: absolute;
+  left: 400px;
+  z-index: 100;
+}
+.calendarBody {
+  position: relative;
+  width: 100%;
+  background-color: $color-white;
+  border-right: $border;
+  .calendarBody__calendarSearch {
+    background-color: $color-white;
+    z-index: 15;
+    border-right: $border;
+    border-left: $border;
+    // box-shadow: 10px 0px 35px rgba(0, 0, 0, 0.15);
+  }
+  //Календар
+  .react-calendar-timeline {
+    //скролл для блоку   потестити
+    .rct-outer {
+      height: calc(100vh - 145px) !important;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    .rct-scroll {
+      overflow-x: hidden;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    //header
+    .rct-calendar-header {
+      border: none;
+      > div {
+        height: 33px !important;
+      }
+    }
+    .rct-dateHeader-primary {
+      color: $color-black;
+      border-right: none;
+    }
+    .rct-header-root {
+      background-color: $color-white;
+      color: $color-black;
+      border-bottom: $border;
+    }
+    .rct-dateHeader {
+      border-bottom: none;
+      border-left: none;
+      background-color: $color-white;
+      color: rgba(34, 34, 34, 1);
+    }
+    //Відмітка поточного часу
+    .rct-scroll {
+      > div:first-child {
+        > div:first-child {
+          background-color: $color-blue !important;
+          width: 1px !important;
+          z-index: 100;
+        }
+      }
+    }
+
+    .test {
+      .rct-dateHeader {
+        display: none;
+      }
+    }
+
+    .test {
+      .rct-dateHeader:nth-child(4n) {
+        display: block;
+      }
+    }
+
+    //sidebar
+    .rct-sidebar {
+      border-right: $border;
+      border-left: $border;
+      left: 0;
+      box-shadow: 4px 0px 35px 0px rgba(0, 0, 0, 0.15);
+      z-index: 10;
+      .rct-sidebar-row {
+        border-bottom: $border;
+        padding-left: 55px;
+        background-image: url('../../../assets/icons/calendar-surf.svg') !important;
+        background-repeat: no-repeat !important;
+        background-position: 25px 18px !important;
+        background-color: $color-white !important;
+      }
+      .rct-sidebar-row-odd {
+        background-color: $color-white !important;
+      }
+    }
+    //активна планка
+    .rct-item {
+      position: relative;
+      background-color: rgba(93, 181, 93, 0.5) !important;
+      border: none !important;
+      border-left: 2px solid rgba(241, 241, 241, 1) !important;
+      // border-left: 2px solid rgba(0, 0, 0, 0.02)!important;
+      color: $color-black !important;
+      &.rct-item-clipped {
+        clip-path: polygon(0 100%, calc(100% - 40px) calc(100%), calc(100%) 0, 0 0);
+      }
+    }
+
+    //горизонтальна лінія
+    .rct-horizontal-lines {
+      .rct-hl-even,
+      .rct-hl-odd {
+        border-bottom: 1px solid rgba(83, 87, 100, 0.1);
+        background-color: rgba(0, 0, 0, 0.02) !important;
+      }
+    }
+
+    //Вертикальна лінія
+    .rct-vertical-lines {
+      .rct-vl {
+        border-left: 1px solid rgba(83, 87, 100, 0.1);
+        background-color: rgba(0, 0, 0, 0.01) !important;
+      }
+      //відмітка неділя вихідний
+      .rct-vl.rct-day-0,
+      .rct-vl.rct-day-6 {
+        background-color: rgba(0, 0, 0, 0.01) !important;
+      }
+    }
+  }
+}
+
+.rct-item__description-block {
+  z-index: 100;
+  width: 250px;
+  max-height: 250px;
+  background-color: $color-white;
+  border: $border;
+  box-shadow: 10px 0px 35px rgba(0, 0, 0, 0.15);
+  // padding: 10px;
+  > li {
+    // margin: 10px 0;
+    padding: 10px;
+    border-bottom: $border;
+    &:nth-last-child(1) {
+      border-bottom: none;
+    }
+    span {
+      font-weight: 700;
+    }
+  }
+}

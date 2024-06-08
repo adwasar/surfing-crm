@@ -1,0 +1,64 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.control {
+  @include flex_block(row, nowrap, flex-start, flex-end, center);
+
+  &__inputWrap {
+    @include flex_block(row, nowrap, flex-start, flex-end, center);
+
+    flex-grow: 1;
+
+    padding: 12px 20px;
+
+    background-color: $color-white;
+    border-radius: 16px;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  &__attachWrap {
+    &:not(:last-child) {
+      margin-right: 13px;
+    }
+  }
+
+  &__textAreaWrap {
+    flex-grow: 1;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+
+    max-height: 8em;
+
+    padding: 8px 0 4px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: $color-text-gray6;
+
+    appearance: none;
+    background-color: transparent;
+    border: none;
+
+    box-sizing: content-box;
+    resize: none;
+    scrollbar-width: none;
+
+    overflow: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

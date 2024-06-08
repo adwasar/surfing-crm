@@ -1,0 +1,65 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.panel {
+  @include flex_block(column, nowrap, flex-start);
+
+  height: 100vh;
+  background-color: $color-white;
+
+  &__list {
+    flex-grow: 1;
+
+    width: 100%;
+
+    padding: 5px 8px;
+
+    overflow-y: auto;
+  }
+
+  &__info {
+    @include flex_block(row, nowrap, flex-start, center, center);
+
+    position: relative;
+
+    height: 100%;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      bottom: -$pading-vertical-header;
+
+      width: 100%;
+      height: 3px;
+
+      background-color: $color-blue;
+
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+  }
+
+  &__infoName {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: $color-blue;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  &__infoValue {
+    padding: 0 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.42;
+    color: $color-white;
+
+    background-color: $color-blue;
+    border-radius: 1em;
+  }
+}

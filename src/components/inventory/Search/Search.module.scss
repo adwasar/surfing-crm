@@ -1,0 +1,35 @@
+@import "../../../assets/scss/variables";
+.search {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: max-width 0.8s ease;
+
+  &__input {
+    width: 100%;
+    max-width: 0;
+    height: 30px;
+    border: none;
+    transition: max-width 0.8s ease;
+    background-color: $color-white;
+    
+    &--active {
+      max-width: 100%;
+      padding-left: 8.5px;
+      margin-right: -8.5px;
+    }
+    &--inactive {
+      max-width: 0;
+      padding-left: 0;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  & button {
+    padding-top: 8.5px !important;
+    padding-bottom: 8.5px !important;
+  }
+}

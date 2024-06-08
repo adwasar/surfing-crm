@@ -1,0 +1,80 @@
+@import "src/assets/scss/variables";
+@import "src/assets/scss/mixins";
+
+.nav__bar {
+  width: 102px;
+  background: $color-white;
+  height: 100vh;
+  padding: 37px 28px 20px;
+  transition: $transition;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &.open {
+    width: 306px;
+    @include tablet {
+      width: calc(100% - 20px);
+    }
+  }
+  .logo {
+    display: block;
+    width: 37px;
+    height: 37px;
+    margin-left: 4px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+  .navbarList {
+    margin: 54px 0;
+    @include tablet {
+      display: flex;
+      gap: 10px;
+      margin: 0;
+    }
+    @include phone2 {
+      justify-content: space-between;
+    }
+  }
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    width: 100%;
+    max-width: calc(100% - 20px);
+    height: fit-content;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 990;
+    padding: 19px 10px;
+    border-radius: 12px;
+    overflow: scroll;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.07);
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.filter {
+  display: none;
+  position: fixed;
+  pointer-events: none;
+  right: 9px;
+  bottom: 10px;
+  height: 72px;
+  width: 100px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), $color-white);
+  z-index: 991;
+  @include tablet {
+    display: block;
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.popoverContainer {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: $color-white;
+}
+.popover {
+  position: relative;
+  padding: 40px 50px;
+
+  &__header {
+    position: sticky;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: $color-white;
+    z-index: 2;
+
+    @include phone2 {
+      height: 76px;
+    }
+  }
+  &__name {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 120px;
+    width: 28px;
+    height: 28px;
+    border: 1px solid $color-text-gray6;
+    background-color: $color-white;
+    cursor: pointer;
+    &:focus-visible {
+      outline: transparent;
+    }
+  }
+
+  @include tablet {
+    padding: 0 20px 20px;
+  }
+  @include phone2 {
+    height: 100%;
+    max-height: 79vh;
+    overflow-y: scroll;
+  }
+}

@@ -1,0 +1,80 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  color: $color-text-gray6;
+  font-size: 12px;
+  line-height: 1.36;
+}
+.menu {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+.select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &__activeOption {
+    width: fit-content;
+    line-height: inherit;
+    color: inherit;
+    font-family: "Roboto", sans-serif;
+  }
+}
+.mobileStyle {
+  @include tablet {
+    & svg:first-child {
+      display: none;
+    }
+  }
+  @include phone2 {
+    & svg:first-child {
+      display: block;
+    }
+    & svg:last-child {
+      display: none;
+    }
+    & span {
+      display: none;
+    }
+  }
+}
+.optionContainer {
+  padding-top: 10px;
+  position: absolute;
+  top: 100%;
+  z-index: 2;
+  .options {
+    padding: 5px 10px;
+    text-align: left;
+    background-color: $color-text-gray7;
+    border-radius: 6px;
+    &__option {
+      padding: 3px 0;
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-gray3;
+      }
+    }
+  }
+}
+
+.mobileMenuInvisible {
+  @include phone2 {
+    display: none;
+  }
+}
+.mobileMenuBtn {
+  display: none;
+}
+.visibleMobileBtn {
+  @include phone2 {
+    display: block;
+  }
+}

@@ -1,0 +1,33 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.chatRoom {
+  @include flex_block(column, nowrap, flex-start, stretch);
+
+  height: 100vh;
+
+  &__main {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+  &__footer {
+    padding: 5px 12px;
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-right: auto;
+    }
+  }
+
+  &__nav {
+    @include flex_block(row, nowrap, flex-start, center, center);
+  }
+
+  &__nav_item {
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+}

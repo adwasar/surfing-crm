@@ -1,0 +1,67 @@
+@import 'src/assets/scss/variables';
+.dropdownList {
+  width: auto;
+  height: max-content;
+  position: relative;
+  color: inherit;
+  .dropdownList__trigger {
+    cursor: pointer;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: $color-white;
+    color: inherit;
+    transition: $transition;
+    &.active {
+      color: $color-text-blue;
+      .chevron {
+        transform: rotate(90deg);
+      }
+    }
+    .chevron {
+      margin-left: 3px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      transition: $transition;
+      transform: rotate(-90deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 5px;
+        height: 10px;
+      }
+    }
+  }
+  .dropdownList__list {
+    width: 100%;
+    min-width: 80px;
+    overflow: hidden;
+    max-height: 0px;
+    position: absolute;
+    background-color: $color-white;
+    border: 1px solid $color-white;
+    border-radius: 3px;
+    transition: $transition;
+    z-index: 20;
+    &.active {
+      border: $border;
+      max-height: 400px;
+      //overflow-y: auto;
+    }
+    .item {
+      cursor: pointer;
+      padding: 5px 10px;
+      border-bottom: $border;
+      transition: $transition;
+      &:hover {
+        color: $color-text-blue;
+      }
+      &:nth-last-child(1) {
+        border-bottom: 1px solid transparent;
+      }
+    }
+  }
+}

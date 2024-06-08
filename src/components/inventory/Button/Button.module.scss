@@ -1,0 +1,22 @@
+@import "../../../assets/scss/variables";
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 100%;
+  padding: 7.5px 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: $color-white;
+  font-size: 12px;
+  line-height: 1.25;
+  cursor: pointer;
+  &--selected {
+    background-color: $color-blue;
+    color: $color-white;
+  }
+  &--unselected {
+    color: $color-text-gray6
+  }
+}

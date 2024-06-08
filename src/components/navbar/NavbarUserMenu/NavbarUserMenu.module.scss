@@ -1,0 +1,81 @@
+@import "src/assets/scss/variables";
+@import "src/assets/scss/mixins";
+
+.navbarUserMenu__button {
+  cursor: pointer;
+  width: 100%;
+  height: 42px;
+  display: flex;
+  align-items: center;
+
+  @include tablet {
+    padding-right: 10px;
+    width: auto;
+  }
+  .userImg {
+    width: 42px;
+    min-width: 46px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: rgba(217, 217, 217, 1);
+  }
+  .userContent {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    .userInfo {
+      width: 100%;
+      padding-left: 12px;
+      display: flex;
+      flex-direction: column;
+      span {
+        width: 100%;
+        display: block;
+        height: 15px;
+      }
+      .userInfo__name {
+        font-weight: 500;
+        font-size: 14px;
+      }
+      .userInfo__position {
+        font-size: 12px;
+        color: $color-text-gray2;
+      }
+    }
+    .chevron {
+      transform: rotate(90deg);
+      margin-right: 20px;
+      transition: $transition;
+      @include tablet {
+        display: none;
+      }
+      &.open {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.navbarUserMenu__content {
+  width: 100%;
+  height: 0px;
+  transition: all linear 0.5s;
+  overflow: hidden;
+  &.open {
+    padding-top: 10px;
+    height: 120px;
+  }
+  .navbarUserMenu__content__item {
+    a {
+      display: block;
+      padding: 5px;
+      margin: 5px;
+      font-weight: 500;
+    }
+  }
+}

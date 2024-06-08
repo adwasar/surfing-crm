@@ -1,0 +1,61 @@
+@import '../../../assets/scss/variables';
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 100%;
+  font-size: 12px;
+  color: $color-text-gray6;
+  line-height: 1.36;
+}
+
+.input,
+textarea {
+  display: block;
+  color: $color-text-black2;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid $color-gray4;
+  border-radius: 12px;
+  line-height: 1.1;
+  padding: 14px 17px;
+  background-color: $color-white;
+  &:focus-visible {
+    outline: none;
+  }
+  &::placeholder {
+    font-size: 14px;
+    color: $color-text-gray7;
+  }
+}
+
+.input[type='button'] {
+  line-height: 1.1;
+  color: $color-white;
+  background-color: $color-blue;
+}
+.textarea {
+  color: $color-text-gray6;
+  resize: none;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+  button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: $color-text-gray7;
+  }
+}
+.inputFile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 2;
+}

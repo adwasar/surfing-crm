@@ -1,0 +1,85 @@
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
+
+.container {
+  overflow: hidden;
+  border-radius: 6px;
+  border: 0.5px solid $color-gray3;
+  overflow-y: auto;
+  max-height: calc(100vh - 160px);
+
+  @include tablet {
+    border-radius: 10px;
+  }
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+.table {
+  position: relative;
+  width: 100%;
+  background-color: $color-white;
+  border-collapse: collapse;
+  @include phone2 {
+    margin-bottom: 50px;
+  }
+}
+
+th {
+  color: $color-text-gray6;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.25;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  @include tablet {
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+  @include phone2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+th:first-child {
+  text-align: left;
+  width: 51px;
+  @include phone2 {
+    padding-left: 15px;
+    width: 37px;
+  }
+}
+th:nth-child(2) {
+  text-align: left;
+  width: 310px;
+  @include tablet {
+    width: 200px;
+  }
+  @include phone2 {
+    width: 173px;
+  }
+}
+th:last-child {
+  padding-right: 15px;
+}
+tr.header {
+  position: sticky;
+  top: 0;
+  background-color: rgb(249, 249, 249);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  z-index: 1;
+}
+.qr,
+.availability,
+.reg,
+.action {
+  @include phone2 {
+    display: none;
+  }
+}
+.price {
+  @include phone2 {
+    padding-right: 15px;
+  }
+}

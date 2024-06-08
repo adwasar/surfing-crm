@@ -1,0 +1,77 @@
+@import "src/assets/scss/variables";
+@import "src/assets/scss/mixins";
+
+.btn {
+  padding: 2px;
+
+  font-size: 100%;
+
+  border: 0;
+  outline: 0;
+
+  vertical-align: baseline;
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  &--modColorPrime {
+    @include hover;
+
+    color: $color-text-gray6;
+    background-color: transparent;
+  }
+
+  &--modColorSecond {
+    @include hover($bg_color: $color-light-blue);
+
+    color: $color-white;
+    background-color: $color-blue;
+  }
+
+  &--modeSize1 {
+    width: 28px;
+    height: 28px;
+  }
+
+  &--modeSize2 {
+    width: 55px;
+    height: 55px;
+
+    padding: 17px;
+
+    border-radius: 16px;
+  }
+
+  &--modeSize3 {
+    width: 23px;
+    height: 23px;
+  }
+  &--modAuthBtn {
+    width: 100%;
+    color: $color-white;
+    background-color: $color-blue;
+    border: 1px solid $color-gray3;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    height: 60px;
+    max-width: 400px;
+    border: transparent;
+    @mixin tablet {
+      max-width: 350px;
+    }
+    @media (max-width: 768px) and (orientation: landscape) {
+      height: 35px;
+    }
+  }
+}

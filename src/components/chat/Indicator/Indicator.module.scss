@@ -1,0 +1,26 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.indicator {
+  @include flex_block(row, nowrap, flex-start, baseline);
+
+  &__icon {
+    color: $color-text-gray;
+
+    &.active {
+      color: $color-blue;
+    }
+
+    &_sent {
+      width: 12px;
+      height: 10px;
+    }
+
+    &_read {
+      width: 11px;
+      height: 10px;
+
+      margin-left: -4px;
+    }
+  }
+}

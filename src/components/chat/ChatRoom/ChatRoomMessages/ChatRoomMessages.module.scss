@@ -1,0 +1,18 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.messages {
+  padding: 12px;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+
+    &--last {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import 'src/assets/scss/variables';
+
+.dropdownMenu {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(./../../../assets/icons/chevron-down.svg);
+  background-position: right 5px center;
+  background-repeat: no-repeat;
+  background-color: #f3f3f3;
+  border: none;
+  padding: 12px 30px 12px 12px;
+  border-radius: 10px;
+  color: #717171;
+  width: 135px;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px #007bff4a inset;
+  }
+}

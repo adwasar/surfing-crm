@@ -1,0 +1,45 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.inventory {
+  padding: 30px;
+  @include tablet {
+    padding: 10px 20px;
+  }
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+  & > button {
+    color: $color-white;
+  }
+}
+.equipmentBtns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  @include tablet {
+    gap: 8px;
+    justify-content: end;
+
+    & button:first-child {
+      margin-right: 5px;
+    }
+    & button {
+      width: 100%;
+      max-width: fit-content;
+    }
+  }
+  @include phone2 {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}

@@ -1,0 +1,30 @@
+@import 'src/assets/scss/mixins';
+
+.donutChart {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    max-width: none;
+  }
+}
+
+.chartsWrapper {
+  margin: auto;
+  width: 100%;
+}
+
+.chartHeader {
+  margin-bottom: 30px;
+  &__title {
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  &__subtitle {
+    margin-top: 3px;
+    color: #717171;
+    font-size: 12px;
+  }
+}

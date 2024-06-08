@@ -1,0 +1,22 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.title {
+  @include flex_block(row, nowrap, flex-start, center, center);
+
+  &__pic {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}

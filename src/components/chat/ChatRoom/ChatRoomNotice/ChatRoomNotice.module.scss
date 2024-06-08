@@ -1,0 +1,112 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+@mixin message_general {
+  padding: 2px 10px;
+}
+
+$sizeAvatar: 40px;
+
+.notice {
+  @include flex_block(row, nowrap, flex-start, flex-end);
+
+  &__pic,
+  &__picEmty {
+    flex: 0 0 $sizeAvatar;
+    width: $sizeAvatar;
+
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+  }
+
+  &__pic {
+    height: $sizeAvatar;
+  }
+
+  &__contentWrap {
+    @include flex_block(row, nowrap, flex-start, flex-end);
+
+    max-width: 70%;
+  }
+
+  &__indWrap {
+    @include flex_block(row, nowrap, flex-start, baseline);
+  }
+
+  &__content {
+    padding: 5px 0;
+
+    font-size: 15px;
+    line-height: 1.33;
+
+    &:not(:last-child) {
+      margin-right: 0.6em;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    color: $color-blue;
+  }
+
+  &__text {
+    font-weight: 400;
+  }
+
+  &__date {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $color-text-gray6;
+    &:not(:last-child) {
+      margin-right: 0.2em;
+    }
+  }
+
+  &__fn {
+    position: absolute;
+    left: -6px;
+    bottom: 0;
+
+    width: 6px;
+    height: 13px;
+
+    color: $color-white;
+  }
+
+  &--in {
+    .notice__contentWrap {
+      @include message_general;
+
+      background-color: $color-white;
+      border-top-right-radius: 16px;
+      border-bottom-right-radius: 16px;
+
+      &--regular {
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 8px;
+      }
+
+      &--last {
+        position: relative;
+
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+  &--out {
+    justify-content: flex-end;
+
+    .notice__contentWrap {
+      @include message_general;
+
+      align-self: flex-end;
+
+      background-color: $color-light-blue;
+      border-radius: 16px 16px 0px 16px;
+    }
+  }
+}

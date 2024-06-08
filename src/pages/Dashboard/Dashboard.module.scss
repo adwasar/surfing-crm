@@ -1,0 +1,15 @@
+@import 'src/assets/scss/mixins';
+
+.chartsWrapper {
+  display: flex;
+  gap: 35px;
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.contentWrapper__rounded {
+  padding: 25px 40px;
+  background-color: white;
+  border-radius: 20px;
+}

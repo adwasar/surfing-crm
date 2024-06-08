@@ -1,0 +1,32 @@
+@import 'src/assets/scss/variables';
+@import 'src/assets/scss/mixins';
+
+.iconUser {
+  &__img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    user-select: none;
+  }
+
+  &__text {
+    @include flex_block(row, nowrap, center, center, center);
+
+    width: 100%;
+    height: 100%;
+
+    font-size: 24px;
+    font-weight: 500;
+    color: $color-white;
+
+    background-color: $color-text-gray4;
+    border-radius: 50%;
+
+    user-select: none;
+    overflow: hidden;
+  }
+}

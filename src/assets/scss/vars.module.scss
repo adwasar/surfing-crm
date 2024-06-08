@@ -1,0 +1,22 @@
+@import './variables';
+:export {
+  colorWhite: $color-white;
+  colorBlack: $color-black;
+  colorBlue: $color-blue;
+  colorGray1: $color-gray1;
+  colorRed: $color-red;
+  colorLight-blue: $color-light-blue;
+  colorGray2: $color-gray2;
+  colorGray3: $color-gray3;
+  colorGray4: $color-gray4;
+
+  colorTextGray: $color-text-gray;
+  colorTextGray2: $color-text-gray2;
+  colorTextGray3: $color-text-gray3;
+  colorTextGray4: $color-text-gray4;
+  colorTextGray5: $color-text-gray5;
+  colorTextGray6: $color-text-gray6;
+  colorTextGray7: $color-text-gray7;
+  colorTextBlack2: $color-text-black2;
+  bg: $bg;
+}

@@ -1,0 +1,65 @@
+@import 'src/assets/scss/variables';
+
+a:hover {
+  .rentalItem {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+}
+
+.rentalItem {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
+  gap: 25px;
+  .wrapper {
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__description {
+    display: flex;
+    gap: 25px;
+    flex: 2;
+
+    &__image {
+      border-radius: 10px;
+      img {
+        object-fit: contain;
+        transition: $transition;
+        vertical-align: bottom;
+      }
+    }
+
+    &__title {
+      font-size: 18px;
+      color: $color-text-gray3;
+    }
+
+    &__additional {
+      font-size: 12px;
+      color: $color-text-gray4;
+    }
+  }
+
+  &__values {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    color: $color-text-gray5;
+
+    p {
+      flex: 1;
+      text-align: center;
+    }
+
+    &__price {
+      font-weight: 500;
+      color: $color-text-gray3;
+      font-size: 16px;
+    }
+  }
+}
